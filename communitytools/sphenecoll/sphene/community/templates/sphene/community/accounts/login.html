@@ -1,0 +1,24 @@
+{% extends "sphene/base.html" %}
+{% load i18n %}
+{% load sph_extras %}
+
+{% block content %}
+
+{% if form.has_errors %}
+  <p>{% trans "Your username and password didn't match. Please try again." %}</p>
+{% endif %}
+
+<form method="post" action="." class="sphform">
+  <table width="100%">
+    <tr><td width="10%"><label for="id_username">{% trans "Username:" %}</label></td><td width="20%">{{ form.username }}</td><td width="70%"></td></tr>
+    <tr><td width="10%"><label for="id_password">{% trans "Password:" %}</label></td><td width="20%">{{ form.password }}</td><td width="70%"></td></tr>
+  </table>
+
+  <input type="submit" value="{% trans "Login" %}" />
+  <input type="hidden" name="next" value="{{ next }}" />
+</form>
+
+<br/><br/>
+<a href="{{ next }}">{% trans "Cancel" %}</a> * <a href="{% sph_url 'sphene.community.views.accounts_forgot' %}">{% trans "Forgot Username/Password ?" %}</a>
+
+{% endblock %}

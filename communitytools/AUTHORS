@@ -1,0 +1,36 @@
+
+
+The PRIMARY AUTHORS are:
+
+Herbert Poul <herbert.poul@gmail.com> - Creator and maintainer of 
+the Sphene Community Tools.
+
+
+
+Thanks to the following contributors:
+(This list might not be complete)
+
+
+Bruce Kroeze <bkroeze@gmail.com> - for contributing patches 
+('Modular post rendering')
+
+
+Daniel Ellison <daniel@syrinx.net> - for providing 
+feature requests/feedback and the "default avatar" image:
+http://sct.sphene.net/board/thread/256/?page=2
+
+
+Eric Simorre <eric.simorre@c-s.fr> - contributed french
+translations for all apps and communitydraft.
+http://djangopeople.net/esimorre/
+
+
+Jakub Wiśniowski <restless.being@gmail.com> - for contributing patches 
+(Using MEDIA_URL instead of hard coded links, i18n translation strings
+as well as polish translations)
+
+
+Young Gyu Park <ygpark2@gmail.com> - for contributing korean 
+translations for all applications.
+
+

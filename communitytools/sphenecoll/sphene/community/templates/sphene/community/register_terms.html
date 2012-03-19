@@ -1,0 +1,16 @@
+{% extends "sphene/sphboard/base.html" %}
+{% load i18n %}
+{% load content %}
+
+{% block content %}
+{% if term %}
+	<h4 align='center'><b><u>{{ term.title }}</u></b></h1><br/>
+  	{% get_content term.content %}
+{% endif %}
+<form action="{{ next }}">
+		<table align="center">
+		<tr><td>
+		<input type='submit' value='Ok!' />
+		</table>
+		</form>
+{% endblock %}

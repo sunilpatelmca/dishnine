@@ -1,0 +1,25 @@
+from django.db import models
+from Publication.models import Subject,Level
+
+class Recent_Updates(models.Model):
+    title = models.CharField(max_length=100)
+    subject = models.ForeignKey(Subject)
+    level = models.ForeignKey(Level)
+    published_date = models.DateTimeField()
+    show_on_home = models.BooleanField(default = True)
+    description = models.TextField()
+    document = models.FileField(upload_to = '.',
+                                blank = True, null = True,)
+
+    class Meta:
+	    verbose_name_plural = "Recent Updates"
+
+    class Admin:
+	    list_display   = ('subject','title')
+        search_fields  = ('title',)
+
+    def __unicode__(self):
+	    return "%s [%s - %s]"%(self.title,self.subject.name,self.level.name)
+
+
+

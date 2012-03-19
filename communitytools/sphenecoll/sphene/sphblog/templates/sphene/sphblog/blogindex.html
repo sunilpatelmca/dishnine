@@ -1,0 +1,49 @@
+{% extends "sphene/sphblog/base.html" %}
+
+{% load sph_extras %}
+{% load sphblog_extras %}
+{% load i18n %}
+
+{% block subtitle %}
+  {% if tag %}
+    {{ tag.name }}
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+
+  {% if allowpostcategories %}
+    <form method="post" name="postthread" action="{% sph_url 'sphblog_postthread' %}">
+      <select name="category">
+	{% for category in allowpostcategories %}
+	  <option value="{{ category.id }}">{{ category.name }}</option>
+	{% endfor %}
+      </select>
+      <input type="submit" value="{% trans "Submit new Post" %}" />
+    </form>
+  {% endif %}
+
+  {% if tag %}
+    <p class="sphtagheader">{% trans "Tag" %}: {{ tag.name }} / <a href="{% sph_url2 sphblog_index %}">{% trans "Back" %}</a></p>
+  {% endif %}
+
+  {% for thread in threads %}
+    {% sphblog_showblogpost thread %}
+  {% endfor %}
+
+  {% if all_tags %}
+    <div class="sph_all_tags">
+      <strong>{% trans "All used Tags:" %}</strong>
+      <ul>
+      {% for tag in all_tags %}
+        <li><a href="{% sph_url2 sphblog_show_tag_posts tag_name=tag.name%}">{{ tag.name }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+  <p>
+    <a href="{% sph_url2 sphblog-feeds "latestposts" %}">{% trans "RSS Feed" %}</a>
+  </p>
+{% endblock %}

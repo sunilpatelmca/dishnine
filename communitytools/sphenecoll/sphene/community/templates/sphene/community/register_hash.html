@@ -1,0 +1,27 @@
+{% extends "sphene/sphboard/base.html" %}
+{% load i18n %}
+{% block content %}
+
+  <b>{% trans "User Registration" %}</b><br/><br/>
+  <div align='right'><b>{% trans "* fields are required." %}</b><br/><br/></div>
+
+  <form method="post" action=".">
+    <table>
+      {{ form }}
+    </table>
+    <table>
+    <tr>
+    <td>
+     <b><br/>By clicking on 'I accept' below you are agreeing to the <a href="/community/accounts/terms/">Terms of Service</a>.</b>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <input type="submit" value="{% trans "I accept, Create my account." %}" />
+    </td>
+    </tr>
+	</table>
+
+  </form>
+
+{% endblock %}

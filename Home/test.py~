@@ -1,0 +1,11 @@
+import unittest
+from Home.models import Home
+
+class HomeTestCase(unittest.TestCase):
+    def setUp(self):
+        self.book1 = Home.objects.create(title="CCC", content="C!!")
+        self.book2 = Home.objects.create(title="DDDD", content="DD!!")
+
+    def testSpeaking(self):
+        self.assertEquals(self.lion.speak(), 'The lion says "roar"')
+        self.assertEquals(self.cat.speak(), 'The cat says "meow"

@@ -1,0 +1,343 @@
+#content-containertable.override
+{
+width:150px;
+min-height:50px;
+max-height:200px;
+overflow:scroll;
+border-color:Silver;
+border-style:Double;
+background-color:Lime;
+}
+
+table.table_style {
+ border-spacing: 0px;
+ border-collapse: collapse;
+ border: 0.2em solid #B4814E;
+}
+table.table_style th .label{
+ text-align: center;
+ font-weight: normal;
+ padding: 0.1em 0.5em;
+ border: 1px;
+ border-bottom: 1px solid #B4814E;
+}
+table.table_style td {
+ text-align: center;
+ border: 1px;
+ border: 1px solid #B4814E;
+ padding: 0.1em 0.1em;
+}
+table.table_style thead th {
+ text-align: center;
+ font-weight: bold;
+ background-color: #AA0000;
+ color: #FFFFFF;
+}
+
+table.table_style_new {
+ border-spacing: 0px;
+ border-collapse: collapse;
+ border: 0em solid #B4814E;
+}
+table.table_style_new th {
+ text-align: center;
+ font-weight: normal;
+ padding: 0.1em 0.5em;
+ border: 0px;
+ border-bottom: 1px solid #B4814E;
+}
+table.table_style_new td {
+ text-align: center;
+ border: 0px;
+ border: 0px solid #B4814E;
+ padding: 0.1em 0.1em;
+}
+table.table_style_new thead th {
+ text-align: center;
+ font-weight: bold;
+ background-color: #AA0000;
+ color: #FFFFFF;
+}
+
+table.table_style_new1 {
+ border-spacing: 0px;
+ border-collapse: collapse;
+ border: 0em solid #B4814E;
+}
+table.table_style_new1 th label{
+ text-align: center;
+ font-weight: normal;
+ padding: 0.1em 0.5em;
+ border: 0px;
+ border-bottom: 1px solid #B4814E;
+}
+table.table_style_new1 td {
+ text-align: center;
+ border: 0px;
+ border: 0px solid #B4814E;
+ padding: 0.1em 0.1em;
+}
+table.table_style_new1 thead th label {
+ text-align: center;
+ font-weight: bold;
+ background-color: #AA0000;
+ color: #FFFFFF;
+}
+
+body{
+font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.style1 {
+	font-family: Georgia, "Times New Roman", Times, serif
+}
+.style2 {font-size: 13px}
+.style3 {
+
+	font-size: 10px;
+	color: #000000;
+	font-weight: bold;
+}
+
+.style3 a:link, a:Visited {
+			color: #000000;
+			font-size: 10px;
+			font-weight:bold;
+			margin:1px 0 1px 0;
+			text-decoration:none;
+		}
+		.style3 a:hover {
+			text-decoration:underline;
+		}
+
+#header h1{
+
+		padding:6px; margin:0; border:0;		
+		color:#000000;
+		font-size:13px;
+		font-weight:bold;
+
+}
+
+#title h1 {
+	color:#333333;
+	display:block;
+	float:left;
+	font-weight:bold;
+	font-size:14px;
+	margin:0;
+	padding:6px;
+	text-align:justify;
+	width:100%;
+}
+
+#title h1 a:link,
+		#title h1 a:Visited {
+			display: block;
+			color: #000000;
+			font-size: 14px;
+			font-weight:bold;
+			margin-bottom:1px;
+			text-decoration:none;
+		}
+		#title h1 a:hover {
+			text-decoration:underline;
+		}
+
+.desc_Title{
+			display: block;
+			color: #000000;
+			font-size: 12px;
+			font-weight:bold;
+			text-align:left;
+			margin:6px 0 14px 0;
+			
+			
+		}
+
+.desc_Title a:link,
+		.desc_Title a:Visited {
+			display: block;
+			color: #000000;
+			font-size: 12px;
+			font-weight:bold;
+			margin-bottom:6px;
+			text-decoration:none;
+		}
+		.desc_Title a:hover {
+			text-decoration:underline;
+		}
+
+.book_Title{
+			display: block;
+			color: #000000;
+			font-size: 12px;
+			font-weight:bold;
+			text-align:left;
+			margin:1px 0 1px 0;
+			
+			
+		}
+
+
+.book_Title a:link,
+		.book_Title a:Visited {
+			color: #000000;
+			font-size: 11px;
+			font-weight:bold;
+			margin:1px 0 1px 0;
+			text-decoration:none;
+		}
+		.book_Title a:hover {
+			text-decoration:underline;
+		}
+
+
+.NewsFooter{
+			display: block;
+			color: #000000;
+			font-size: 10px;
+			text-align:left;
+			margin:6px 0 14px 0;
+		}
+
+#NewsVerticalfull {
+	width: 100%;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	}
+	#controller{
+	padding:6px;
+	font-size:11px;
+	color:#666;
+	}
+	#play_scroll_cont{display:none;}
+/* --------------- */
+/* Ticker Vertical1 */
+	#TickerVerticalfull {
+		width: 100%;
+		height: 100%;
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	#TickerVerticalfull li {
+		display: block;
+		width: 98%;
+		color: #333333;
+		text-align: justify;
+		font-size: 11px;
+		margin: 0;
+		padding: 6px;
+		float: left;
+	}
+		#TickerVerticalfull li .NewsTitle{
+			display: block;
+			color: #000000;
+			font-size: 12px;
+			font-weight:bold;
+			margin-bottom:6px;
+		}
+		#TickerVerticalfull li .NewsTitle a:link,
+		#TickerVerticalfull li .NewsTitle a:Visited {
+			display: block;
+			color: #000000;
+			font-size: 12px;
+			font-weight:bold;
+			margin-bottom:6px;
+			text-decoration:none;
+		}
+		#TickerVerticalfull li .NewsTitle a:hover {
+			text-decoration:underline;
+		}
+		
+		#TickerVerticalfull li .NewsImg{
+			float:left;
+			margin-right:10px;
+		}
+		#TickerVerticalfull li .NewsFooter{
+			display: block;
+			color: #000000;
+			font-size: 10px;
+			margin:6px 0 14px 0;
+		}
+
+#NewsTicker{
+
+	
+	width:300px;
+	height:0px;
+	margin:0 auto;
+}
+	#NewsTicker h1{
+		padding:6px; margin:0; border:0;
+		
+		color:#000000;
+		font-size:15px;
+		font-weight:bold;
+	}
+	#NewsVertical {
+	width: 300px;
+	height: 257px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	}
+	#controller{
+	padding:6px;
+	font-size:11px;
+	color:#666;
+	}
+	#play_scroll_cont{display:none;}
+/* --------------- */
+/* Ticker Vertical */
+	#TickerVertical {
+		width: 300px;
+		height: 330px;
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	#TickerVertical li {
+		display: block;
+		width: 288px;
+		color: #333333;
+		text-align: justify;
+		font-size: 12px;
+		margin: 0;
+		padding: 6px;
+		float: left;
+	}
+		#TickerVertical li .NewsTitle{
+			display: block;
+			color: #000000;
+			font-size: 13px;
+			font-weight:bold;
+			margin-bottom:6px;
+		}
+		#TickerVertical li .NewsTitle a:link,
+		#TickerVertical li .NewsTitle a:Visited {
+			display: block;
+			color: #000000;
+			font-size: 13px;
+			font-weight:bold;
+			margin-bottom:6px;
+			text-decoration:none;
+		}
+		#TickerVertical li .NewsTitle a:hover {
+			text-decoration:underline;
+		}
+		
+		#TickerVertical li .NewsImg{
+			float:left;
+			margin-right:10px;
+		}
+		#TickerVertical li .NewsFooter{
+			display: block;
+			color: #000000;
+			font-size: 10px;
+			margin:6px 0 14px 0;
+		}

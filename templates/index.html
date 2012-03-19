@@ -1,0 +1,81 @@
+{% extends 'base_index.html' %}
+{% load content image %}
+{% block title %}<title>Home</title>{% endblock %}
+{% block content %}
+	<tr>
+		<td rowspan="2" align="left" valign="top" background="/media/images/index_08.gif" style="background-repeat:no-repeat">&nbsp;</td>
+	  <td height="61" colspan="3" align="center" valign="middle" background="/media/images/index_09.gif"><script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','370','height','51','src','/media/flash/wel come to my wabsite11','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/media/flash/wel come to my wabsite11' ); //end AC code
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="370" height="51">
+          <param name="movie" value="/media/flash/wel come to my wabsite11.swf">
+          <param name="quality" value="high">
+          <embed src="/media/flash/wel come to my wabsite11.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="370" height="51"></embed>
+	    </object></noscript></td>
+		<td colspan="2" rowspan="2" align="left" valign="top" background="/media/images/index_10.gif" style="background-repeat:no-repeat"><p align="center">
+	    <p><div id="NewsTicker">
+  <h1>What's news?</h1>
+  <div id="controller">
+    <div id="stop_scroll_cont"><a id="stop_scroll"><img src="/media/images/stop.png" width="14" height="14" border="0" align="absmiddle" /></a> Stop news scroll</div>
+    <div id="play_scroll_cont"><a id="play_scroll"><img src="/media/images/play.png" width="14" height="14" border="0" align="absmiddle"/></a> Play news scroll</div>
+    </div>
+<div id="NewsVertical">
+	  <ul id="TickerVertical">
+	{% for recent_update in recent_updates %}
+        <li>
+            
+            <span class="NewsTitle">
+            <a href="/Recent_Updates/{{ recent_update.id }}/">{{ recent_update.title }}</a>
+            </span>
+            {{ recent_update.description|truncatewords:20 }}  <div class="NewsTitle" align="right"> <a style="font-size:10px;" href="/Recent_Updates/{{ recent_update.id }}/">Read More...</a> </div> <span class="NewsFooter"><strong>Published {{ recent_update.published_date }}</strong></span>        </li>
+
+
+	{% endfor %}
+        
+    </ul>
+    </div>
+</div>
+</p></td>
+  </tr>
+	<tr>
+		<td height="298" colspan="2" align="left" valign="top" background="/media/images/index_11.gif" style="background-repeat:no-repeat"><table width="97%" height="255" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="423" height="252" align="left" valign="top"><p align="justify" class="style1"><span id="myContent" name="myContent" class="style2">
+{% if home %}
+{% get_content home.content %}
+{% endif %}
+</span></p>
+          </tr>
+<tr align="right">
+		<td>
+			<img width="21" height="11" alt="" src="/media/images/arrow_up.gif" id="arrow_up"/></td>
+		<td>
+			<img width="21" height="11" alt="" src="/media/images/arrow_down.gif" id="arrow_down"/></td>
+	</tr>
+	
+        </table>		  
+	    </td>
+<td align="left" valign="top" background="/media/images/index_12.gif">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="6" background="/media/images/index_13.gif" width="933" height="33">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="/media/images/spacer.gif" width="46" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="150" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="81" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="351" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="9" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="96" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="246" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="45" height="1" alt=""></td>
+	</tr>
+	{% endblock %}
+

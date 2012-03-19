@@ -1,0 +1,184 @@
+{% extends 'base_index.html' %}
+{% load content image file_content %}
+
+{% block title %}<title>My Publication - Author Detail</title>
+<link href="../media/css/general.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block body %}
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- ImageReady Slices (My Publication.psd) -->
+<table id="Table_01" width="1000"  border="0" cellpadding="0" cellspacing="0" align="center">
+<td height="128" colspan="8"><script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','1024','height','128','src','/media/flash/dishnine','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/media/flash/dishnine' ); //end AC code`
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="1024" height="128">
+          <param name="movie" value="/media/flash/dishnine.swf">
+          <param name="quality" value="high">
+          <embed src="/media/flash/dishnine.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="1024" height="128"></embed>
+	    </object></noscript></td>
+	
+	<tr>
+		<td rowspan="5" background="/media/images/main_02.gif" style="background-repeat:no-repeat">&nbsp;</td>
+<td colspan="2" rowspan="2" background="/media/images/main_03.gif" style="background-repeat:no-repeat">&nbsp;</td>
+		<td><script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','455','height','48','src','/media/flash/~button1','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','/media/flash/~button1' ); //end AC code
+        </script>
+		  <noscript>
+		  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="455" height="48">
+            <param name="movie" value="/media/flash/~button1.swf">
+            <param name="quality" value="high">
+            <embed src="/media/flash/~button1.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="455" height="48"></embed>
+          </object>
+		  </noscript></td>
+	  <td colspan="2" rowspan="2" background="/media/images/main_05.gif" style="background-repeat:no-repeat"><table width="98%" border="0" align="left" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+		{% block login %}
+		{% if user.is_authenticated %}
+          <tr>
+		  		<td align="right" valign="bottom"><span class="style3"></span></td>
+          		<td align="right" valign="bottom"><span class="style3">Welcome, <a href="/accounts/profile/{{ user.id }}/" style="font-size: 10px;">{{ user.username }}</a>.</span></td>
+        	</tr>
+			<tr>
+				<td align="right" valign="bottom"><span class="style3"></span></td>
+				<td align="right" valign="bottom"  ><span class="style3"><a href="/accounts/profile/edit/{{ user.id }}/" style="font-size: 10px;">Edit Profile</a>&nbsp;&nbsp;&nbsp;<a href="/accounts/logout/" style="font-size: 10px;">Sign Out</a></span></td>
+        	</tr>
+		{% else %}
+			<tr>
+          		<td align="right" valign="bottom"><span class="style3"><a href="/accounts/login/?next={{ next }}" style="font-size: 10px;">Sign in</a></span></td>
+        	</tr>
+		{% endif %}
+	{% endblock %}
+      </table></td>
+		<td colspan="2" rowspan="2" background="/media/images/main_06.gif">
+			</td>
+	</tr>
+	<tr>
+		<td>
+			<img src="/media/images/main_07.gif" width="456" height="11" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2" background="/media/images/main_08.gif" style="background-repeat:no-repeat">&nbsp;</td>
+		<td height="24" colspan="3" background="/media/images/13.gif" style="background-repeat:no-repeat">&nbsp;</td>
+  <td colspan="2" rowspan="2" background="/media/images/main_10.gif" style="background-repeat:no-repeat">&nbsp;</td>
+		<td rowspan="3" background="/media/images/main_11.gif" style="background-repeat:no-repeat">&nbsp;</td>
+			
+	</tr>
+	<tr>
+		<td colspan="3" background="/media/images/main_12.gif">
+		<table width="94%" cellpadding="0" cellspacing="1" >
+			<tr align="right">
+		<td>
+			<img width="21" height="11" alt="" src="/media/images/arrow_up.gif" id="arrow_up"/>
+			<img width="21" height="11" alt="" src="/media/images/arrow_down.gif" id="arrow_down"/></td>
+		
+	</tr>
+		</table>
+		<div  id="myTableContent"><table width="94%" style="height:100%;" cellpadding="0" cellspacing="1" class="table_style">
+	<tr>
+		<td valign="top" ><table style="height:100px;" width="100%" cellpadding="0" cellspacing="1" class="table_style">
+			<tr height="1%">
+                <td  colspan="3" width="2%" style="text-align:left;"><div id="title"><h1>Author Detail :-</h1></div></td>
+              </tr>
+              <tr height="1%">
+                <td width="2%" rowspan="3" align="center" valign="middle"><img src="{% if author.photo %}{% get_image author.photo %}{% else %}/media/sphene/community/default_avatar.png{% endif %}" alt="" width="112" height="90"></td>
+                <td width="2%" style="text-align:left;"><div id="title"><h1>Name&nbsp;:-</h1></div></td>
+                <td width="25%" style="text-align:left;"><div class="book_Title" ><a href="/Publication/Book/Author/{{ author.id }}/"/>{{ author.salutation }} {{ author.name }}</a></div></td>
+              </tr>
+			  <tr height="1%">
+                <td width="2%" colspan="2" style="text-align:left;"><div id="title"><h1>Contact Detail :-</h1></div></td>
+              
+              </tr>
+			  <tr height="1%">
+                <td align="justify" colspan="2" valign="middle"><div id="NewsVerticalfull" >
+	  				<ul id="TickerVerticalfull">
+					        <li>
+					            <div align="justify"><span class="NewsTitle">
+						            {{ author.address }}, {{ author.city }}, {{ author.state_province }}, {{ author.country }}.
+					            </span>
+								{% if author.website or author.email or author.phone or author.mobile or author.fax %}
+								<span class="NewsTitle">
+						            <table style="height:100px;" width="100%" cellpadding="0" cellspacing="1" class="table_style">
+					{% if author.website %}
+              		<tr height="1%">
+                		<td width="2%" style="text-align:left;"><div id="title"><h1>Website :-</h1></div></td>
+                		<td width="25%" style="text-align:justify;"><div class="book_Title"><a href="{{ author.website }}">{{ author.website }}</a></div></td>
+              		</tr>
+					{% endif %}
+					{% if author.email %}
+              		<tr height="1%">
+                		<td width="2%" style="text-align:left;"><div id="title"><h1>Email :-</h1></div></td>
+                		<td width="25%" style="text-align:justify;"><div class="book_Title"><a href="mailto:{{ author.email }}">{{ author.email }}</a></div></td>
+              		</tr>
+					{% endif %}
+					{% if author.phone %}
+              		<tr height="1%">
+                		<td width="2%" style="text-align:left;"><div id="title"><h1>Phone :-</h1></div></td>
+                		<td width="25%" style="text-align:justify;"><div class="book_Title">{{ author.phone }}</div></td>
+              		</tr>
+					{% endif %}
+					{% if author.mobile %}
+              		<tr height="1%">
+                		<td width="2%" style="text-align:left;"><div id="title"><h1>Mobile :-</h1></div></td>
+                		<td width="25%" style="text-align:justify;"><div class="book_Title">{{ author.mobile }}</div></td>
+              		</tr>
+					{% endif %}
+					{% if author.fax %}
+              		<tr height="1%">
+                		<td width="2%" style="text-align:left;"><div id="title"><h1>Fax :-</h1></div></td>
+                		<td width="25%" style="text-align:justify;"><div class="book_Title">{{ author.fax }}</div></td>
+              		</tr>
+					{% endif %}
+					</table>
+					            </span>
+								{% endif %}
+        			</div>
+			          </li>
+    				</ul>
+                </div></td>
+              </tr>
+			  <tr height="1%">
+                <td  colspan="3" width="2%" style="text-align:left;"><div id="title"><h1>About Me :-</h1></div></td>
+              </tr>
+              <tr height="1%">
+                <td col colspan="3" width="25%"><div id="NewsVerticalfull" >
+	  				<ul id="TickerVerticalfull">
+					        <li>
+					            <div align="justify">{% get_content author.content %}</li></ul></div></td>
+              </tr>
+             
+		
+		</table></div></td>
+          </tr>
+		 
+        </table></td>
+  </tr>
+ 
+	<tr>
+		<td colspan="5" background="/media/images/main_13.gif" style="background-repeat:no-repeat">&nbsp;</td>
+		<td>
+			<img src="/media/images/main_14.gif" width="1" height="30" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="/media/images/spacer.gif" width="41" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="15" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="221" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="456" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="232" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="14" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="1" height="1" alt=""></td>
+		<td>
+			<img src="/media/images/spacer.gif" width="44" height="1" alt=""></td>
+	</tr>
+</table>
+<!-- End ImageReady Slices -->
+</body>
+{% endblock %}
+
